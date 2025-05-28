@@ -27,12 +27,6 @@ npm install
 
 2. **Çevre değişkenlerini ayarla:**
 ```bash
-# .env dosyası oluştur
-GEMINI_API_KEY=AIzaSyDPk3L-PUmd6vgqkFfutz1ETU1EQOg2CLs
-MARKET_API_BASE_URL=https://api.marketfiyati.org.tr/api/v2
-PORT=3000
-NODE_ENV=development
-```
 
 3. **Projeyi derle:**
 ```bash
