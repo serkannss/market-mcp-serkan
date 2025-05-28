@@ -1,5 +1,7 @@
 # Market Fiyatı MCP Server
 
+[![smithery badge](https://smithery.ai/badge/@serkannss/market-mcp-serkan)](https://smithery.ai/server/@serkannss/market-mcp-serkan)
+
 Market Fiyatı API'si için Model Context Protocol (MCP) server ve Gemini AI entegrasyonu.
 
 ## 🚀 Özellikler
@@ -12,6 +14,14 @@ Market Fiyatı API'si için Model Context Protocol (MCP) server ve Gemini AI ent
 - **Akıllı Öneriler**: AI destekli ürün önerileri
 
 ## 📦 Kurulum
+
+### Installing via Smithery
+
+To install market-mcp-serkan for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@serkannss/market-mcp-serkan):
+
+```bash
+npx -y @smithery/cli install @serkannss/market-mcp-serkan --client claude
+```
 
 ### Gereksinimler
 - Node.js 18+
