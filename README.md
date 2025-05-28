@@ -17,34 +17,9 @@ Market Fiyatı API'si için Model Context Protocol (MCP) server ve Gemini AI ent
 - Node.js 18+
 - npm veya yarn
 - Gemini AI API Key
+- 
 
-### Adımlar
 
-1. **Bağımlılıkları yükle:**
-```bash
-npm install
-```
-
-2. **Çevre değişkenlerini ayarla:**
-```bash
-
-3. **Projeyi derle:**
-```bash
-npm run build
-```
-
-4. **Server'ı başlat:**
-```bash
-# MCP Server
-npm start
-
-# Express API Server (mobil uygulama için)
-npm run dev
-```
-
-## 🛠️ MCP Araçları
-
-### 1. search_products
 Ürün arama işlemi yapar.
 
 **Parametreler:**
@@ -149,63 +124,7 @@ AI ile genel sohbet.
 
 ## 📱 Mobil Uygulama Entegrasyonu
 
-### Örnek Kullanım
 
-```javascript
-// Ürün arama
-const searchProducts = async (keywords, latitude, longitude) => {
-  const response = await fetch('http://localhost:3000/api/search', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      keywords,
-      latitude,
-      longitude,
-      distance: 5,
-      size: 24
-    })
-  });
-  
-  return await response.json();
-};
-
-// AI önerisi alma
-const getAIRecommendations = async (userQuery, keywords, latitude, longitude) => {
-  const response = await fetch('http://localhost:3000/api/ai/recommendations', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      userQuery,
-      keywords,
-      latitude,
-      longitude
-    })
-  });
-  
-  return await response.json();
-};
-
-// Fiyat karşılaştırması
-const comparePrices = async (productId, latitude, longitude) => {
-  const response = await fetch('http://localhost:3000/api/compare-prices', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      productId,
-      latitude,
-      longitude
-    })
-  });
-  
-  return await response.json();
-};
-```
 
 ## 🤖 AI Özellikleri
 
@@ -305,12 +224,6 @@ EXPOSE 3000
 CMD ["node", "dist/index.js"]
 ```
 
-### Environment Variables
-```bash
-GEMINI_API_KEY=your_gemini_api_key
-MARKET_API_BASE_URL=https://api.marketfiyati.org.tr/api/v2
-PORT=3000
-NODE_ENV=production
 ```
 
 ## 📝 Lisans
