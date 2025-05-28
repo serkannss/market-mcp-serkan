@@ -67,65 +67,6 @@
    📝 Market alışverişi danışmanlığı aktif
 ```
 
-## 🚀 Nasıl Çalıştırılır
-
-### 1. MCP Server
-```bash
-# Environment variable set et
-$env:GEMINI_API_KEY="AIzaSyDLKTK-HGXSGw3H8KhZE1GItZ0fHwUwVkA"
-
-# MCP Server başlat
-npm start
-```
-
-### 2. Mobil API Server
-```bash
-# Environment variable set et
-$env:GEMINI_API_KEY="AIzaSyDLKTK-HGXSGw3H8KhZE1GItZ0fHwUwVkA"
-
-# Mobil API Server başlat
-npm run mobile
-```
-
-### 3. Test
-```bash
-# Health check
-Invoke-WebRequest -Uri http://localhost:3000/health
-
-# Ürün arama
-$body = @{keywords="patates"; latitude=41.0082; longitude=28.9784} | ConvertTo-Json
-Invoke-WebRequest -Uri http://localhost:3000/api/search -Method POST -Body $body -ContentType "application/json"
-
-# AI Sohbet
-$chatBody = @{message="Merhaba! Market alışverişi hakkında bilgi verebilir misin?"} | ConvertTo-Json
-Invoke-WebRequest -Uri http://localhost:3000/api/ai/chat -Method POST -Body $chatBody -ContentType "application/json"
-```
-
-## 📱 Mobil Uygulama Entegrasyonu
-
-### React Native Örneği:
-```javascript
-// API Service
-const searchProducts = async (keywords, latitude, longitude) => {
-  const response = await fetch('http://localhost:3000/api/search', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ keywords, latitude, longitude })
-  });
-  return await response.json();
-};
-
-// AI Sohbet
-const chatWithAI = async (message) => {
-  const response = await fetch('http://localhost:3000/api/ai/chat', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message })
-  });
-  return await response.json();
-};
-```
-
 ## 🔧 Teknik Detaylar
 
 ### Kullanılan Teknolojiler:
