@@ -1,0 +1,69 @@
+{
+  "api": {
+    "baseUrl": "http://localhost:3000",
+    "timeout": 10000,
+    "retryAttempts": 3
+  },
+  "app": {
+    "name": "Market Fiyat Karşılaştırma",
+    "version": "1.0.0",
+    "defaultLocation": {
+      "latitude": 41.0082,
+      "longitude": 28.9784,
+      "city": "İstanbul"
+    }
+  },
+  "features": {
+    "aiChat": true,
+    "priceComparison": true,
+    "nearbyMarkets": true,
+    "shoppingList": true,
+    "favorites": true,
+    "notifications": true
+  },
+  "ui": {
+    "theme": {
+      "primary": "#007bff",
+      "secondary": "#28a745",
+      "danger": "#dc3545",
+      "warning": "#ffc107",
+      "info": "#17a2b8",
+      "light": "#f8f9fa",
+      "dark": "#343a40"
+    },
+    "animations": true,
+    "hapticFeedback": true
+  },
+  "markets": [
+    {
+      "id": "bim",
+      "name": "BİM",
+      "color": "#0066cc",
+      "logo": "bim-logo.png"
+    },
+    {
+      "id": "a101",
+      "name": "A101",
+      "color": "#e31e24",
+      "logo": "a101-logo.png"
+    },
+    {
+      "id": "sok",
+      "name": "ŞOK",
+      "color": "#ff6600",
+      "logo": "sok-logo.png"
+    },
+    {
+      "id": "migros",
+      "name": "Migros",
+      "color": "#ff8c00",
+      "logo": "migros-logo.png"
+    },
+    {
+      "id": "tarim_kredi",
+      "name": "Tarım Kredi",
+      "color": "#228b22",
+      "logo": "tarim-kredi-logo.png"
+    }
+  ]
+} 
