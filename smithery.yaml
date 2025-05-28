@@ -1,0 +1,24 @@
+# Smithery configuration file: https://smithery.ai/docs/build/project-config
+
+startCommand:
+  type: stdio
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({ command: 'node', args: ['dist/index.js'], env: { GEMINI_API_KEY: config.geminiApiKey, ...(config.marketApiBaseUrl ? { MARKET_API_BASE_URL: config.marketApiBaseUrl } : {}) } })
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - geminiApiKey
+    properties:
+      geminiApiKey:
+        type: string
+        description: Google Gemini AI API anahtarı
+      marketApiBaseUrl:
+        type: string
+        default: https://api.marketfiyati.org.tr/api/v2
+        description: Market API base URL
+  exampleConfig:
+    geminiApiKey: YOUR_GEMINI_API_KEY
+    marketApiBaseUrl: https://api.marketfiyati.org.tr/api/v2
